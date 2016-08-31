@@ -18,12 +18,13 @@ namespace LightsOut
         private const int CellLength = GridLength / NumCells;
         private bool[,] grid; // Stores on/off state of cells in grid
         private Random rand; // Used to generate random numbers
+        private int x;
 
         public MainForm()
         {
             InitializeComponent();
 
-            rand = new Random(); // Initializes random number generator
+            rand = new Random(); 
             grid = new bool[NumCells, NumCells];
             // Turn entire grid on
             for (int r = 0; r < NumCells; r++)
